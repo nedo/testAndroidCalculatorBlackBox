@@ -30,19 +30,19 @@ public class TestApk extends ActivityInstrumentationTestCase2 {
 	}
 
 	public void testDisplayBlackBox() {
-		// Enter any integer/decimal value for first editfield, we are writing  10
+		// Enter any integer/decimal value for first edit-field, we are writing  10
 		solo.clearEditText(0);
 		solo.enterText(0, "10");
 		
-		// Enter any integer/decimal value for first editfield, we are writing  20
+		// Enter any integer/decimal value for first edit-field, we are writing  20
 		solo.clearEditText(1);
 		solo.enterText(1, "20");
 		
-		// Click on Multiply button
+		// Tap on Multiply button
 		solo.clickOnButton("Multiply");
 
 		// Verify that resultant of 10 x 20
-		assertTrue(solo.searchText("200"));
+		assertTrue("Problem asserting multiply", solo.searchText("200"));
 	}
 
 	@Override
